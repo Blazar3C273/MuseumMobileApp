@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_color">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Item short name"
+        android:id="@+id/simpleItemName"
+        android:lineSpacingExtra="4dp"
+        android:singleLine="false"
+        android:lines="1"
+        android:linksClickable="true"
+        android:shadowColor="@color/viewfinder_laser"
+        android:layout_gravity="center_horizontal" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="25dip"
+        android:id="@+id/imageView"
+        android:src="@drawable/line3"
+        android:scaleType="centerInside" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:fillViewport="true"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:scrollbars="vertical"
+        android:isScrollContainer="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/descriptionTextWiew"
+            android:overScrollMode="ifContentScrolls"
+            android:clickable="true"
+            android:textAlignment="center" />
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="25dip"
+        android:id="@+id/imageView2"
+        android:src="@drawable/line3"
+        android:scaleType="centerInside" />
+</LinearLayout>

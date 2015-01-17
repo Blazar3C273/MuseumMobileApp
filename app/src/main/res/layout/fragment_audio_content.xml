@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tk.hackspace.MusemMobileApp.AudioContent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Item name"
+        android:id="@+id/audioItemName"
+        android:layout_gravity="center_horizontal|top" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="25dip"
+        android:id="@+id/imageView3"
+        android:src="@drawable/line3"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/audioDescriptionTextView"
+        android:layout_gravity="center_horizontal"
+        android:lines="4" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="25dip"
+        android:id="@+id/imageView4"
+        android:src="@drawable/line3"
+        android:scaleType="centerInside" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

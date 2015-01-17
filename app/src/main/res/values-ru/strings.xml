@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">МОБИЛЬНЫЙ ГИД</string>
+    <string name="barcode_image">Изображение кода</string>
+    <string name="capture_name">Захват QR-кода</string>
+    <string name="contents_contact">Контактная информация</string>
+    <string name="contents_email">Электронный адрес</string>
+    <string name="contents_location">Географические координаты</string>
+    <string name="contents_sms">SMS адрес</string>
+    <string name="contents_phone">Телефонный номер</string>
+    <string name="contents_text">Простой текст</string>
+    <string name="decoder_name">Расшифровка QR-кода</string>
+    <string name="encoder_name">Шифрование QR-кода</string>
+    <string name="msg_default_status">Чтобы начать сканирование разместите код внутри прямоугольной области.</string>
+    <string name="msg_query_is_sending">Query sended to server. Whaiting for answer.</string>
+    <string name="msg_server_unavalble">Server unavailable now. Contact the staff.</string>
+    <string name="content_browser_activity_name">Content browser</string>
+    <string name="msg_code_not_found">Exhibit not found. Please, try another.</string>
+    <string name="text_content_veiw_title">Exhibit information</string>
+    <string name="audio_content_veiw_title">Audio information</string>
+</resources>
