@@ -2,11 +2,19 @@ package tk.hackspace.MusemMobileApp;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import tk.hackspace.MusemMobileApp.items.Item;
+import tk.hackspace.MusemMobileApp.items.VideoFile;
+import tk.hackspace.MusemMobileApp.network.URLFactory;
+import tk.hackspace.MusemMobileApp.simple.DemoUtil;
+import tk.hackspace.MusemMobileApp.simple.SimplePlayerActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,14 +25,7 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class VideoContent extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-    private static final String ITEM_ID = "item";
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private Item item;
 
     private OnVideoFragmentInteractionListener mListener;
 
@@ -32,16 +33,13 @@ public class VideoContent extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param itemID Parameter 1.
+     * @param _item Parameter 1.
      * @return A new instance of fragment VideoContent.
      */
     // TODO: Rename and change types and number of parameters
-    public static VideoContent newInstance(String itemID) {
+    public static VideoContent newInstance(Item _item) {
         VideoContent fragment = new VideoContent();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, itemID);
-
-        fragment.setArguments(args);
+        fragment.item = _item;
         return fragment;
     }
 
@@ -52,17 +50,26 @@ public class VideoContent extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-
-
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        Button button = (Button) this.getActivity().findViewById(R.id.button33);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), SimplePlayerActivity.class);
+                VideoFile videoFile = item.getVideoFiles().get(0);
+                if (videoFile != null) {
+                    intent
+                            .setData(Uri.parse(URLFactory.getVideoURL(item.get_id(), videoFile.getFilename(), getActivity().getApplicationContext())))
+                            .putExtra(DemoUtil.CONTENT_ID_EXTRA, videoFile.getShortName())
+                            .putExtra(DemoUtil.CONTENT_TYPE_EXTRA, DemoUtil.TYPE_OTHER);
+                    startActivity(intent);
+                }
+            }
+        });
 
     }
 
@@ -80,12 +87,6 @@ public class VideoContent extends Fragment {
         return inflater.inflate(R.layout.fragment_video_content, container, false);
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
 
     @Override
     public void onAttach(Activity activity) {

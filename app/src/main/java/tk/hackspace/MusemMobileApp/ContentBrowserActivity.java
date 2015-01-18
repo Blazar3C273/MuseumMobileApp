@@ -13,6 +13,9 @@ import android.view.MenuItem;
 
 import java.util.Locale;
 
+import tk.hackspace.MusemMobileApp.items.FileSerialization.ItemDeserializer;
+import tk.hackspace.MusemMobileApp.items.Item;
+
 
 public class ContentBrowserActivity extends Activity implements TextcontentFragment.OnTextFragmentInteractionListener,
         AudioContent.OnAudioFragmentInteractionListener, VideoContent.OnVideoFragmentInteractionListener {
@@ -32,15 +35,17 @@ public class ContentBrowserActivity extends Activity implements TextcontentFragm
      * The {@link ViewPager} that will host the section contents.
      */
     ViewPager mViewPager;
-    String currentItemID;
+    String currentItemJson;
+    private Item currentItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.i(TAG, "onCreate");
         setContentView(R.layout.activity_content_browser);
-        if (getIntent().hasExtra("itemID")) {
-            currentItemID = getIntent().getExtras().getString("itemID");
+        if (getIntent().hasExtra("item")) {
+            currentItemJson = getIntent().getExtras().getString("item");
+            currentItem = ItemDeserializer.getTunedForDeserializationGson().fromJson(currentItemJson, Item.class);
         }
         mSectionsPagerAdapter = new SectionsPagerAdapter(getFragmentManager());
 
@@ -98,13 +103,14 @@ public class ContentBrowserActivity extends Activity implements TextcontentFragm
         @Override
         public Fragment getItem(int position) {
             Log.i(TAG, "getItem()");
+
             switch (position) {
                 case 1:
-                    return AudioContent.newInstance(currentItemID);
+                    return AudioContent.newInstance(currentItem);
                 case 2:
-                    return VideoContent.newInstance(currentItemID);
+                    return VideoContent.newInstance(currentItem);
                 default:
-                    return TextcontentFragment.newInstance(currentItemID);
+                    return TextcontentFragment.newInstance(currentItem);
             }
         }
 

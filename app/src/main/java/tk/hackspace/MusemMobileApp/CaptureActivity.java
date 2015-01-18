@@ -134,7 +134,7 @@ public class CaptureActivity extends DecoderActivity {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                     progressBar.setEnabled(false);
-                    intent.putExtra("itemID", rawResult.getText());
+                    intent.putExtra("item", response.toString());
                     startActivity(intent);
                 }
 

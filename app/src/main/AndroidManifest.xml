@@ -18,7 +18,6 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
@@ -26,13 +25,15 @@
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
 
     <application
-
         android:icon="@drawable/icon"
         android:label="@string/app_name">
         <activity
-            android:name="tk.hackspace.MusemMobileApp.CaptureActivity"
+            android:name=".CaptureActivity"
             android:clearTaskOnLaunch="true"
             android:configChanges="orientation|keyboardHidden"
             android:icon="@drawable/icon"
@@ -47,29 +48,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity
-            android:name="tk.hackspace.MusemMobileApp.ContentBrowserActivity"
-            android:parentActivityName="tk.hackspace.MusemMobileApp.ContentBrowserActivity"
+            android:name=".ContentBrowserActivity"
+            android:parentActivityName=".ContentBrowserActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="tk.hackspace.MusemMobileApp.ContentBrowserActivity" />
         </activity>
         <activity
-            android:name="tk.hackspace.MusemMobileApp.PictureViewerActivity"
+            android:name=".PictureViewerActivity"
             android:label="@string/title_activity_image_view"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <data android:scheme="view" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".simple.SimplePlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/video_content_veiw_title"
+            android:theme="@style/PlayerTheme" />
     </application>
 
 </manifest>

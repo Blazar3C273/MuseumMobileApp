@@ -2,18 +2,6 @@
 <items version="2">
 
     <item
-        jar="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\exploded-aar\com.android.support\support-v13\21.0.3\libs\internal_impl-21.0.3.jar"
-        jumboMode="false" revision="21.1.2" sha1="0dcc55e70f7ebf7238fe2ec53f662eb378ab2668">
-        <dex
-            dex="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-ec340d9b05759b741f8c502ad13f42a70c71e068.jar" />
-    </item>
-    <item
-        jar="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\exploded-aar\it.sephiroth.android.library.imagezoom\imagezoom\2.1.1\classes.jar"
-        jumboMode="false" revision="21.1.2" sha1="8fbd4390c086423b591596e4b04a03e0e59b9397">
-        <dex
-            dex="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\classes-2fe2fcc8888b4b9669f31b9127265684ad4d1e94.jar" />
-    </item>
-    <item
         jar="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
         jumboMode="false" revision="21.1.2" sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
         <dex
@@ -30,12 +18,6 @@
         jumboMode="false" revision="21.1.2" sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
         <dex
             dex="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-adef377c261b5ab1a73ae40baabc37f7beb22c4d.jar" />
-    </item>
-    <item
-        jar="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
-        jumboMode="false" revision="21.1.2" sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex
-            dex="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-d9868f961a0ba780f8ca4c01a2d36927b4efa321.jar" />
     </item>
     <item
         jar="C:\Users\Anatoliy\.gradle\caches\modules-2\files-2.1\com.nostra13.universalimageloader\universal-image-loader\1.9.3\a85588bec3e2c4584d593d3f15df1677321bca72\universal-image-loader-1.9.3.jar"
@@ -56,10 +38,28 @@
             dex="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.6-3eda69d10d0d5d302abac829f741fb952f671144.jar" />
     </item>
     <item
-        jar="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\exploded-aar\me.neavo\vitamio\4.2.2\classes.jar"
-        jumboMode="false" revision="21.1.2" sha1="42758c720605ffd5916f008ae3cbdee5617afbd3">
+        jar="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\exploded-aar\com.android.support\support-v13\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false" revision="21.1.2" sha1="0dcc55e70f7ebf7238fe2ec53f662eb378ab2668">
         <dex
-            dex="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\classes-b368aef5682b0c9333e613ff638a4f106066ba42.jar" />
+            dex="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-ec340d9b05759b741f8c502ad13f42a70c71e068.jar" />
+    </item>
+    <item
+        jar="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\exploded-aar\it.sephiroth.android.library.imagezoom\imagezoom\2.1.1\classes.jar"
+        jumboMode="false" revision="21.1.2" sha1="8fbd4390c086423b591596e4b04a03e0e59b9397">
+        <dex
+            dex="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\classes-2fe2fcc8888b4b9669f31b9127265684ad4d1e94.jar" />
+    </item>
+    <item
+        jar="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\libs\library.jar"
+        jumboMode="false" revision="21.1.2" sha1="f574ee91325adf7eb89925593036791dfbddbc8e">
+        <dex
+            dex="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\library-635d2113807259000c47426f3abe16a932f77ab4.jar" />
+    </item>
+    <item
+        jar="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false" revision="21.1.2" sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex
+            dex="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-d9868f961a0ba780f8ca4c01a2d36927b4efa321.jar" />
     </item>
     <item
         jar="C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\exploded-aar\com.android.support\support-v13\21.0.3\classes.jar"

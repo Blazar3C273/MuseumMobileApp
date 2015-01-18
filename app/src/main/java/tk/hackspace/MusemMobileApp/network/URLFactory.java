@@ -18,4 +18,8 @@ public class URLFactory {
     public static String getImageURL(String itemID, String pictureFileName, Context context) {
         return getItemURL(itemID, context) + "/" + pictureFileName;
     }
+
+    public static String getVideoURL(String itemID, String filename, Context context) {
+        return getItemURL(itemID, context) + "/" + filename;
+    }
 }

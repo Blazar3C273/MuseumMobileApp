@@ -16,20 +16,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.loopj.android.http.JsonHttpResponseHandler;
-import com.loopj.android.http.ResponseHandlerInterface;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.ImageSize;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 
-import org.apache.http.Header;
-import org.json.JSONObject;
-
-import tk.hackspace.MusemMobileApp.items.FileSerialization.ItemDeserializer;
 import tk.hackspace.MusemMobileApp.items.Item;
 import tk.hackspace.MusemMobileApp.items.PictureFile;
-import tk.hackspace.MusemMobileApp.network.NetworkingFunctions;
 import tk.hackspace.MusemMobileApp.network.URLFactory;
 
 /**
@@ -50,10 +43,11 @@ public class TextcontentFragment extends Fragment {
     private OnTextFragmentInteractionListener mListener;
 
     // TODO: Rename and change types of parameters
-    public static TextcontentFragment newInstance(String itemID) {
+    public static TextcontentFragment newInstance(Item _item) {
         TextcontentFragment fragment = new TextcontentFragment();
         Bundle args = new Bundle();
-        args.putString(ITEM_ID, itemID);
+        fragment.item = _item;
+        args.putString(ITEM_ID, fragment.item.get_id());
         fragment.setArguments(args);
         return fragment;
     }
@@ -106,59 +100,42 @@ public class TextcontentFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        if (getArguments() != null) {
-            final String itemID = getArguments().getString(ITEM_ID);
-            ResponseHandlerInterface responceHandler = new JsonHttpResponseHandler() {
-                @Override
-                public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-
-                    item = ItemDeserializer.getTunedForDeserializationGson().fromJson(response.toString(), Item.class);
-                    if (item != null) {
-                        //startPictureLoading();
-                        if (item.getPictureFiles() != null) {
-                            for (final PictureFile pictureFile : item.getPictureFiles()) {
-                                ImageLoadingListener listner = new SimpleImageLoadingListener() {
-                                    @Override
-                                    public void onLoadingComplete(String imageUri, final View view, Bitmap loadedImage) {
-                                        super.onLoadingComplete(imageUri, view, loadedImage);
-                                        Log.i(TAG, "picture from uri " + imageUri + " is loaded");
-                                        pictureFile.setBitmap(loadedImage);
-                                        Html.ImageGetter imageGetter = new Html.ImageGetter() {
-                                            @Override
-                                            public Drawable getDrawable(String s) {
-                                                Drawable drawable = null;
-                                                for (final PictureFile file : item.getPictureFiles()) {
-                                                    if (file.getFilename().equals(s) && file.getBitmap() != null) {
-                                                        Rect bounds = new Rect(0, 0, file.getBitmap().getWidth(), file.getBitmap().getHeight());
-                                                        drawable = new BitmapDrawable(file.getBitmap());
-                                                        drawable.setBounds(bounds);
-                                                    }
-                                                }
-                                                return drawable;
-                                            }
-                                        };
-                                        Spanned spanned = Html.fromHtml(item.getText(), imageGetter, null);
-
-                                        ((TextView) getView().findViewById(R.id.descriptionTextWiew)).setText(spanned);
-                                        ((TextView) getView().findViewById(R.id.descriptionTextWiew)).setMovementMethod(LinkMovementMethod.getInstance());
+        if (item.getPictureFiles() != null) {
+            for (final PictureFile pictureFile : item.getPictureFiles()) {
+                ImageLoadingListener listner = new SimpleImageLoadingListener() {
+                    @Override
+                    public void onLoadingComplete(String imageUri, final View view, Bitmap loadedImage) {
+                        super.onLoadingComplete(imageUri, view, loadedImage);
+                        Log.i(TAG, "picture from uri " + imageUri + " is loaded");
+                        pictureFile.setBitmap(loadedImage);
+                        Html.ImageGetter imageGetter = new Html.ImageGetter() {
+                            @Override
+                            public Drawable getDrawable(String s) {
+                                Drawable drawable = null;
+                                for (final PictureFile file : item.getPictureFiles()) {
+                                    if (file.getFilename().equals(s) && file.getBitmap() != null) {
+                                        Rect bounds = new Rect(0, 0, file.getBitmap().getWidth(), file.getBitmap().getHeight());
+                                        drawable = new BitmapDrawable(file.getBitmap());
+                                        drawable.setBounds(bounds);
                                     }
-                                };
-                                ImageSize size = new ImageSize(pictureFile.getWidth(), pictureFile.getHeight());
-                                ImageLoader.getInstance().loadImage(URLFactory.getImageURL(item.get_id(), pictureFile.getFilename(), getActivity()), size, listner);
+                                }
+                                return drawable;
                             }
-                        } else {
-                            Spanned spanned = Html.fromHtml(item.getText(), null, null);
-                            ((TextView) getView().findViewById(R.id.descriptionTextWiew)).setText(spanned);
-                        }
-                        ((TextView) getView().findViewById(R.id.simpleItemName)).setText(item.getItemName());
+                        };
+                        Spanned spanned = Html.fromHtml(item.getText(), imageGetter, null);
+
+                        ((TextView) getView().findViewById(R.id.descriptionTextWiew)).setText(spanned);
+                        ((TextView) getView().findViewById(R.id.descriptionTextWiew)).setMovementMethod(LinkMovementMethod.getInstance());
                     }
-
-                }
-            };
-            NetworkingFunctions.getInstance().getAsyncHttpClient().get(URLFactory.getItemURL(itemID, getActivity().getApplicationContext()), responceHandler);
-
+                };
+                ImageSize size = new ImageSize(pictureFile.getWidth(), pictureFile.getHeight());
+                ImageLoader.getInstance().loadImage(URLFactory.getImageURL(item.get_id(), pictureFile.getFilename(), getActivity()), size, listner);
+            }
+        } else {
+            Spanned spanned = Html.fromHtml(item.getText(), null, null);
+            ((TextView) getView().findViewById(R.id.descriptionTextWiew)).setText(spanned);
         }
-
+        ((TextView) getView().findViewById(R.id.simpleItemName)).setText(item.getItemName());
     }
 
     @Override

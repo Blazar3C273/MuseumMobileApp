@@ -40,13 +40,14 @@ public class AudioContent extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param ItemId Parameter 1.
+     * @param _item Parameter 1.
      * @return A new instance of fragment AudioContent.
      */
-    public static AudioContent newInstance(String ItemId) {
+    public static AudioContent newInstance(Item _item) {
         AudioContent fragment = new AudioContent();
+        fragment.item = _item;
         Bundle args = new Bundle();
-        args.putString(ARG_ITEM_ID, ItemId);
+        args.putString(ARG_ITEM_ID, _item.get_id());
         fragment.setArguments(args);
         return fragment;
     }
