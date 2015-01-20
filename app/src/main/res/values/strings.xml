@@ -66,6 +66,7 @@
     <string name="msg_no_audio">Exhibit has no audio.</string>
     <string name="title_activity_playing_video">PlayingVideo</string>
     <string name="failed">TODO write failing massage</string>
-    <!--> TODO Write failing massage</!-->
+    <string name="default_file_length">2:05</string>
+
 
 </resources>

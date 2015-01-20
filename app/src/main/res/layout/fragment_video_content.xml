@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
@@ -6,6 +6,17 @@
     android:orientation="vertical"
     android:background="@color/background_color">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/video_list_view"
+        android:layout_gravity="top|center_horizontal"
+        android:dividerHeight="2dip"
+        android:drawSelectorOnTop="true"
+        android:overScrollFooter="@drawable/line3"
+        android:overScrollHeader="@drawable/line3"
 
-</FrameLayout>
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true" />
+
+</LinearLayout>

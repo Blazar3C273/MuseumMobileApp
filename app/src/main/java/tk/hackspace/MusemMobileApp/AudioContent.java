@@ -7,19 +7,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ListView;
 
-import com.loopj.android.http.JsonHttpResponseHandler;
-import com.loopj.android.http.ResponseHandlerInterface;
-
-import org.apache.http.Header;
-import org.json.JSONObject;
-
-import tk.hackspace.MusemMobileApp.items.AudioFile;
-import tk.hackspace.MusemMobileApp.items.FileSerialization.ItemDeserializer;
 import tk.hackspace.MusemMobileApp.items.Item;
-import tk.hackspace.MusemMobileApp.network.NetworkingFunctions;
-import tk.hackspace.MusemMobileApp.network.URLFactory;
 
 
 /**
@@ -72,24 +62,9 @@ public class AudioContent extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        if (getArguments() != null) {
-            final String itemID = getArguments().getString(ARG_ITEM_ID);
-            ResponseHandlerInterface responseHandler = new JsonHttpResponseHandler() {
-                @Override
-                public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                    item = ItemDeserializer.getTunedForDeserializationGson().fromJson(response.toString(), Item.class);
-                    ((TextView) getActivity().findViewById(R.id.audioItemName)).setText(item.getItemName());
-                    TextView discriptionText = ((TextView) getActivity().findViewById(R.id.audioDescriptionTextView));
-                    if (item.getAudioFiles() == null) {
-                        discriptionText.setText(R.string.msg_no_audio);
-                    } else
-                        for (AudioFile audioFile : item.getAudioFiles()) {
-                            discriptionText.setText(discriptionText.getText() + "\n" + audioFile.getDescription());
-                        }
-                }
-            };
-            NetworkingFunctions.getInstance().getAsyncHttpClient().get(getActivity(), URLFactory.getItemURL(itemID, getActivity()), responseHandler);
-        }
+        ListView listView = (ListView) getView().findViewById(R.id.audio_file_list_view);
+        final AudioFileAdapter adapter = new AudioFileAdapter(item, getView().getContext());
+        listView.setAdapter(adapter);
     }
 
     @Override

@@ -2,19 +2,14 @@ package tk.hackspace.MusemMobileApp;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ListView;
 
 import tk.hackspace.MusemMobileApp.items.Item;
-import tk.hackspace.MusemMobileApp.items.VideoFile;
-import tk.hackspace.MusemMobileApp.network.URLFactory;
-import tk.hackspace.MusemMobileApp.simple.DemoUtil;
-import tk.hackspace.MusemMobileApp.simple.SimplePlayerActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -50,26 +45,17 @@ public class VideoContent extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Button button = (Button) this.getActivity().findViewById(R.id.button33);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity().getApplicationContext(), SimplePlayerActivity.class);
-                VideoFile videoFile = item.getVideoFiles().get(0);
-                if (videoFile != null) {
-                    intent
-                            .setData(Uri.parse(URLFactory.getVideoURL(item.get_id(), videoFile.getFilename(), getActivity().getApplicationContext())))
-                            .putExtra(DemoUtil.CONTENT_ID_EXTRA, videoFile.getShortName())
-                            .putExtra(DemoUtil.CONTENT_TYPE_EXTRA, DemoUtil.TYPE_OTHER);
-                    startActivity(intent);
-                }
-            }
-        });
+        ListView listView = (ListView) getView().findViewById(R.id.video_list_view);
+        //  what do if vido files array is empty ?
+        VideoItemAdapter adapter = new VideoItemAdapter(getView().getContext(), item);
+        listView.setAdapter(adapter);
+
 
     }
 
@@ -84,7 +70,10 @@ public class VideoContent extends Fragment {
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_video_content, container, false);
+        View inflate = inflater.inflate(R.layout.fragment_video_content, container, false);
+
+
+        return inflate;
     }
 
 
@@ -95,7 +84,7 @@ public class VideoContent extends Fragment {
             mListener = (OnVideoFragmentInteractionListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
-                    + " must implement OnAudioFragmentInteractionListener");
+                    + " must implement OnVideoFragmentInteractionListener");
         }
     }
 

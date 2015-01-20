@@ -38,11 +38,7 @@ import java.util.Collection;
 
 import tk.hackspace.MusemMobileApp.camera.CameraManager;
 
-/**
- * Example Decoder Activity.
- *
- * @author Justin Wetherell (phishman3579@gmail.com)
- */
+
 public class DecoderActivity extends Activity implements IDecoderActivity, SurfaceHolder.Callback {
 
     private static final String TAG = DecoderActivity.class.getSimpleName();

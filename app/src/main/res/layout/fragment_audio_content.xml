@@ -23,13 +23,11 @@
         android:src="@drawable/line3"
         android:scaleType="centerInside" />
 
-    <TextView
-        android:layout_width="fill_parent"
+    <ListView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/audioDescriptionTextView"
-        android:layout_gravity="center_horizontal"
-        android:lines="4" />
+        android:id="@+id/audio_file_list_view"
+        android:layout_gravity="center_horizontal" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -38,9 +36,4 @@
         android:src="@drawable/line3"
         android:scaleType="centerInside" />
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:layout_gravity="center_horizontal" />
 </LinearLayout>
