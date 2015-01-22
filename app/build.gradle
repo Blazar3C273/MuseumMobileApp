@@ -4,7 +4,7 @@ android {
     compileSdkVersion 17
     buildToolsVersion "21.1.2"
     defaultConfig {
-        applicationId "com.jwetherell.quick_response_code"
+        applicationId 'tk.hackspace.MusemMobileApp'
         minSdkVersion 16
         targetSdkVersion 16
     }

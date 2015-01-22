@@ -21,11 +21,6 @@ public class Item {
     private boolean hasAttachments;
     private boolean isChanged = false;
 
-    @Override
-    public String toString() {
-        return itemName;
-    }
-
     public Item(String _id, String _rev, String text, ArrayList<PictureFile> pictureFiles, ArrayList<AudioFile> audioFiles, ArrayList<VideoFile> videoFiles, String parent, String itemName, boolean hasAttachments) {
 
         this._id = _id;
@@ -50,6 +45,11 @@ public class Item {
 
     public Item() {
 
+    }
+
+    @Override
+    public String toString() {
+        return itemName;
     }
 
     public String get_id() {
@@ -185,7 +185,7 @@ public class Item {
             return;
         }
 
-        //TODO test when getAttachmentType() return null
+
         for (AttacheFile attacheFile : attacheFiles) {
             switch (attacheFile.getAttachmentType()) {
                 case JsonFormatStrings.ATTACHMENT_TYPE_PICTURE:

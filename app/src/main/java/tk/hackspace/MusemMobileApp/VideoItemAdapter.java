@@ -32,6 +32,9 @@ public class VideoItemAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
+        if (item == null || item.getVideoFiles() == null) {
+            return 0;
+        }
         return item.getVideoFiles().size();
     }
 
@@ -56,11 +59,9 @@ public class VideoItemAdapter extends BaseAdapter {
         final VideoFile videoFile = (VideoFile) getItem(i);
 
         // заполняем View в пункте списка данными из товаров: наименование, цена
-        // и картинка
+        // и картинк
         ((TextView) view.findViewById(R.id.video_file_name)).setText(videoFile.getShortName());
-        ((TextView) view.findViewById(R.id.video_file_description)).setText(videoFile.getDescription() + "");
-
-//        ((TextView) view.findViewById(R.id.video_file_length)).setText(videoFile.getTimeSec());
+        ((TextView) view.findViewById(R.id.video_file_description)).setText(videoFile.getDescription());
         //((ImageView) view.findViewById(R.id.ivImage)).setImageResource();
         view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,6 +71,7 @@ public class VideoItemAdapter extends BaseAdapter {
                         .setData(Uri.parse(URLFactory.getVideoURL(item.get_id(), videoFile.getFilename(), ctx)))
                         .putExtra(DemoUtil.CONTENT_ID_EXTRA, videoFile.getShortName())
                         .putExtra(DemoUtil.CONTENT_TYPE_EXTRA, DemoUtil.TYPE_OTHER);
+
                 ctx.startActivity(intent);
             }
         });

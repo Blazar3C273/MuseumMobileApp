@@ -13,9 +13,19 @@
     <string name="encoder_name">Шифрование QR-кода</string>
     <string name="msg_default_status">Чтобы начать сканирование разместите код внутри прямоугольной области.</string>
     <string name="msg_query_is_sending">Query sended to server. Whaiting for answer.</string>
-    <string name="msg_server_unavalble">Server unavailable now. Contact the staff.</string>
-    <string name="content_browser_activity_name">Content browser</string>
-    <string name="msg_code_not_found">Exhibit not found. Please, try another.</string>
-    <string name="text_content_veiw_title">Exhibit information</string>
-    <string name="audio_content_veiw_title">Audio information</string>
+    <string name="msg_server_unavalble">Сервер не доступен. Обратитесь к персоналу музея.</string>
+    <string name="content_browser_activity_name">Просмотр контента</string>
+    <string name="msg_code_not_found">Экспонат не найден. Попробуйте другой код.</string>
+    <string name="text_content_veiw_title">Информация о экспонате.</string>
+    <string name="audio_content_veiw_title">Аудио</string>
+    <string name="default_current_track_name">Имя медиафайла</string>
+    <string name="action_settings">Настройки</string>
+    <string name="msg_no_audio">Экспонат не имеет аудио.</string>
+    <string name="item_name">Имя экспоната</string>
+    <string name="no_video_label">Этот экспонат не имеет видео материалов.</string>
+    <string name="title_activity_content_browser">Просмотрщик контента</string>
+    <string name="title_activity_image_view">Просмотр изображения</string>
+    <string name="title_activity_playing_video">Просмотр видео</string>
+    <string name="video_content_veiw_title">Видео материалы</string>
+    <string name="failed">Произошла ошибка. Обратитесь к сотрудникам музея.</string>
 </resources>

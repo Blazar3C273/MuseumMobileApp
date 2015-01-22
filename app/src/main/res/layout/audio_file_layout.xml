@@ -2,99 +2,61 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
     android:background="@color/darker_background_color"
+    android:orientation="horizontal"
     android:padding="2dip">
 
     <ImageView
+        android:id="@+id/audio_cover"
         android:layout_width="100dip"
         android:layout_height="100dip"
-        android:id="@+id/audio_cover"
-        android:src="@drawable/albumart"
+        android:layout_gravity="center_vertical"
         android:contentDescription="album cover"
-        android:layout_gravity="center_vertical" />
+        android:src="@drawable/albumart" />
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical">
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2">
+            android:layout_weight="2"
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/track_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Track name"
-                android:id="@+id/track_name"
                 android:layout_gravity="center_vertical"
+                android:layout_weight="1"
                 android:paddingLeft="5dip"
                 android:paddingRight="5dip"
-                android:layout_weight="1" />
+                android:text="Track name"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
+                android:id="@+id/track_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="2:55"
-                android:id="@+id/track_time"
                 android:layout_gravity="center_vertical"
                 android:paddingRight="5dip"
+                android:text="@string/zero_track_length"
+                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@android:color/secondary_text_light" />
         </LinearLayout>
 
         <TextView
+            android:id="@+id/track_discription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Short track discription. May contain several strings. Maybe. "
-            android:id="@+id/track_discription"
+            android:layout_weight="1"
             android:paddingLeft="5dip"
-            android:layout_weight="1" />
+            android:text="Short track discription. May contain several strings. Maybe. "
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="bottom|center_horizontal"
-            android:layout_marginLeft="5dip"
-            android:layout_marginRight="5dip"
-            android:layout_weight="2">
-
-            <ImageView
-                android:layout_width="40dip"
-                android:layout_height="40dip"
-                android:id="@+id/play_pause_button"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/play_button_t"
-                android:adjustViewBounds="false"
-                android:scaleType="centerCrop" />
-
-            <SeekBar
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/audio_file_seek_bar"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="5dip"
-                android:indeterminate="false" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="2:55"
-                android:id="@+id/current_track_time"
-                android:layout_gravity="center"
-                android:textColor="@android:color/secondary_text_light"
-                android:gravity="fill_vertical" />
-
-        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

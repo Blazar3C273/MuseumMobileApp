@@ -2,12 +2,12 @@ package tk.hackspace.MusemMobileApp;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import tk.hackspace.MusemMobileApp.items.Item;
 
@@ -22,7 +22,9 @@ import tk.hackspace.MusemMobileApp.items.Item;
 public class VideoContent extends Fragment {
     private Item item;
 
-    private OnVideoFragmentInteractionListener mListener;
+    public VideoContent() {
+        // Required empty public constructor
+    }
 
     /**
      * Use this factory method to create a new instance of
@@ -38,10 +40,6 @@ public class VideoContent extends Fragment {
         return fragment;
     }
 
-    public VideoContent() {
-        // Required empty public constructor
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,9 +50,12 @@ public class VideoContent extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         ListView listView = (ListView) getView().findViewById(R.id.video_list_view);
-        //  what do if vido files array is empty ?
         VideoItemAdapter adapter = new VideoItemAdapter(getView().getContext(), item);
         listView.setAdapter(adapter);
+        ((TextView) getView().findViewById(R.id.item_name)).setText(item.getItemName());
+        if (adapter.getCount() == 0) {
+            ((TextView) getView().findViewById(R.id.no_video_label)).setVisibility(View.VISIBLE);
+        }
 
 
     }
@@ -68,12 +69,7 @@ public class VideoContent extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        // Inflate the layout for this fragment
-        View inflate = inflater.inflate(R.layout.fragment_video_content, container, false);
-
-
-        return inflate;
+        return inflater.inflate(R.layout.fragment_video_content, container, false);
     }
 
 
@@ -81,7 +77,6 @@ public class VideoContent extends Fragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         try {
-            mListener = (OnVideoFragmentInteractionListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
                     + " must implement OnVideoFragmentInteractionListener");
@@ -91,7 +86,6 @@ public class VideoContent extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        mListener = null;
     }
 
     /**
@@ -105,8 +99,6 @@ public class VideoContent extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnVideoFragmentInteractionListener {
-        // TODO: Update argument type and name
-        public void onFragmentInteraction(Uri uri);
     }
 
 }

@@ -46,39 +46,23 @@ import tk.hackspace.MusemMobileApp.R;
 public class SimplePlayerActivity extends Activity implements SurfaceHolder.Callback,
         ExoPlayer.Listener, MediaCodecVideoTrackRenderer.EventListener {
 
-    /**
-     * Builds renderers for the player.
-     */
-    public interface RendererBuilder {
-
-        void buildRenderers(RendererBuilderCallback callback);
-
-    }
-
     public static final int RENDERER_COUNT = 2;
     public static final int TYPE_VIDEO = 0;
     public static final int TYPE_AUDIO = 1;
-
     private static final String TAG = "PlayerActivity";
-
     private MediaController mediaController;
     private Handler mainHandler;
     private View shutterView;
     private VideoSurfaceView surfaceView;
-
     private ExoPlayer player;
     private RendererBuilder builder;
     private RendererBuilderCallback callback;
     private MediaCodecVideoTrackRenderer videoRenderer;
-
     private boolean autoPlay = true;
     private long playerPosition;
-
     private Uri contentUri;
     private int contentType;
     private String contentId;
-
-    // Activity lifecycle
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -93,6 +77,7 @@ public class SimplePlayerActivity extends Activity implements SurfaceHolder.Call
         builder = getRendererBuilder();
 
         setContentView(R.layout.activity_playing_video);
+        setTitle(contentId);
         View root = findViewById(R.id.test_video_fragment);
         root.setOnTouchListener(new OnTouchListener() {
             @Override
@@ -112,6 +97,8 @@ public class SimplePlayerActivity extends Activity implements SurfaceHolder.Call
 
         DemoUtil.setDefaultCookieManager();
     }
+
+    // Activity lifecycle
 
     @Override
     public void onResume() {
@@ -142,13 +129,11 @@ public class SimplePlayerActivity extends Activity implements SurfaceHolder.Call
         shutterView.setVisibility(View.VISIBLE);
     }
 
-    // Public methods
-
     public Handler getMainHandler() {
         return mainHandler;
     }
 
-    // Internal methods
+    // Public methods
 
     private void toggleControlsVisibility() {
         if (mediaController.isShowing()) {
@@ -157,6 +142,8 @@ public class SimplePlayerActivity extends Activity implements SurfaceHolder.Call
             mediaController.show(0);
         }
     }
+
+    // Internal methods
 
     private RendererBuilder getRendererBuilder() {
         String userAgent = DemoUtil.getUserAgent(this);
@@ -209,12 +196,12 @@ public class SimplePlayerActivity extends Activity implements SurfaceHolder.Call
         finish();
     }
 
-    // ExoPlayer.Listener implementation
-
     @Override
     public void onPlayerStateChanged(boolean playWhenReady, int playbackState) {
         // Do nothing.
     }
+
+    // ExoPlayer.Listener implementation
 
     @Override
     public void onPlayWhenReadyCommitted() {
@@ -226,13 +213,13 @@ public class SimplePlayerActivity extends Activity implements SurfaceHolder.Call
         onError(e);
     }
 
-    // MediaCodecVideoTrackRenderer.Listener
-
     @Override
     public void onVideoSizeChanged(int width, int height, float pixelWidthHeightRatio) {
         surfaceView.setVideoWidthHeightRatio(
                 height == 0 ? 1 : (pixelWidthHeightRatio * width) / height);
     }
+
+    // MediaCodecVideoTrackRenderer.Listener
 
     @Override
     public void onDrawnToSurface(Surface surface) {
@@ -254,12 +241,12 @@ public class SimplePlayerActivity extends Activity implements SurfaceHolder.Call
         // This is for informational purposes only. Do nothing.
     }
 
-    // SurfaceHolder.Callback implementation
-
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
         maybeStartPlayback();
     }
+
+    // SurfaceHolder.Callback implementation
 
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
@@ -271,6 +258,15 @@ public class SimplePlayerActivity extends Activity implements SurfaceHolder.Call
         if (videoRenderer != null) {
             player.blockingSendMessage(videoRenderer, MediaCodecVideoTrackRenderer.MSG_SET_SURFACE, null);
         }
+    }
+
+    /**
+     * Builds renderers for the player.
+     */
+    public interface RendererBuilder {
+
+        void buildRenderers(RendererBuilderCallback callback);
+
     }
 
     /* package */ final class RendererBuilderCallback {

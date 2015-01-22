@@ -26,13 +26,13 @@ public class NetworkingFunctions {
     private AsyncHttpClient asyncHttpClient;
     private Date lastPing;
 
-    public static NetworkingFunctions getInstance() {
-        return instance;
-    }
-
     private NetworkingFunctions(Context context) {
         this.context = context;
         asyncHttpClient = new AsyncHttpClient();
+    }
+
+    public static NetworkingFunctions getInstance() {
+        return instance;
     }
 
     public static NetworkingFunctions initNetworkingFunctions(Context context) {
@@ -42,7 +42,7 @@ public class NetworkingFunctions {
     }
 
     public boolean isServerAvailable() {
-        //TODO check server state
+
         AsyncHttpClient client = new AsyncHttpClient();
         ResponseHandlerInterface responseHandler = new JsonHttpResponseHandler() {
             @Override

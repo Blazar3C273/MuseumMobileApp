@@ -2,21 +2,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
-    tools:context="tk.hackspace.MusemMobileApp.VideoContent"
+    android:background="@color/background_color"
     android:orientation="vertical"
-    android:background="@color/background_color">
+    tools:context="tk.hackspace.MusemMobileApp.VideoContent">
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:text="@string/item_name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="25dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/line3" />
 
     <ListView
+        android:id="@+id/video_list_view"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/video_list_view"
         android:layout_gravity="top|center_horizontal"
-        android:dividerHeight="2dip"
-        android:drawSelectorOnTop="true"
-        android:overScrollFooter="@drawable/line3"
-        android:overScrollHeader="@drawable/line3"
-
+        android:dividerHeight="5dip"
+        android:drawSelectorOnTop="false"
         android:footerDividersEnabled="true"
-        android:headerDividersEnabled="true" />
+
+        android:headerDividersEnabled="true"
+        android:overScrollFooter="@drawable/line3"
+        android:overScrollHeader="@drawable/line3" />
+
+    <TextView
+        android:id="@+id/no_video_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:text="@string/no_video_label"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="25dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/line3" />
 
 </LinearLayout>

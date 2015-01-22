@@ -74,55 +74,60 @@ containing a value of this type.
         public static final int play_button_t=0x7f020005;
     }
     public static final class id {
-        public static final int action_settings=0x7f060030;
-        public static final int audioItemName=0x7f060021;
+        public static final int action_settings=0x7f060035;
+        public static final int audioItemName=0x7f06001e;
         public static final int audio_cover=0x7f06000d;
-        public static final int audio_file_list_view=0x7f060023;
-        public static final int audio_file_seek_bar=0x7f060012;
+        public static final int audio_file_list_view=0x7f060026;
         public static final int auto_focus=0x7f060000;
-        public static final int contents_text_view=0x7f060020;
-        public static final int current_track_time=0x7f060013;
+        public static final int contents_text_view=0x7f06001d;
+        public static final int current_track_length=0x7f060023;
+        public static final int current_track_name=0x7f060020;
+        public static final int current_track_time=0x7f060021;
         public static final int decode=0x7f060001;
         public static final int decode_failed=0x7f060002;
         public static final int decode_succeeded=0x7f060003;
-        public static final int descriptionTextWiew=0x7f060029;
-        public static final int encode_view=0x7f06001e;
+        public static final int descriptionTextWiew=0x7f06002f;
+        public static final int encode_view=0x7f06001b;
         public static final int image=0x7f060009;
-        public static final int imageView=0x7f060027;
-        public static final int imageView2=0x7f06002a;
-        public static final int imageView3=0x7f060022;
-        public static final int imageView4=0x7f060024;
-        public static final int image_view=0x7f06001f;
-        public static final int linearLayout1=0x7f06002c;
+        public static final int imageView=0x7f06002d;
+        public static final int imageView2=0x7f060030;
+        public static final int imageView3=0x7f06001f;
+        public static final int imageView4=0x7f060025;
+        public static final int imageView5=0x7f060028;
+        public static final int imageView6=0x7f06002b;
+        public static final int image_view=0x7f06001c;
+        public static final int item_name=0x7f060027;
+        public static final int linearLayout1=0x7f060032;
+        public static final int no_video_label=0x7f06002a;
         public static final int pager=0x7f060008;
         public static final int pictureViewerRelativeLayout=0x7f060004;
-        public static final int play_pause_button=0x7f060011;
-        public static final int preview_view=0x7f060014;
-        public static final int queryIsSendingTextView=0x7f060018;
-        public static final int query_sending_progress_bar=0x7f060017;
+        public static final int play_pause_button=0x7f060022;
+        public static final int player_seek_bar=0x7f060024;
+        public static final int preview_view=0x7f060011;
+        public static final int queryIsSendingTextView=0x7f060015;
+        public static final int query_sending_progress_bar=0x7f060014;
         public static final int quit=0x7f060005;
         public static final int restart_preview=0x7f060006;
-        public static final int result_view=0x7f060016;
+        public static final int result_view=0x7f060013;
         public static final int return_scan_result=0x7f060007;
-        public static final int scrollView=0x7f060028;
+        public static final int scrollView=0x7f06002e;
         public static final int shutter=0x7f06000c;
-        public static final int simpleItemName=0x7f060026;
-        public static final int status_view=0x7f060019;
+        public static final int simpleItemName=0x7f06002c;
+        public static final int status_view=0x7f060016;
         public static final int surface_view=0x7f06000b;
-        public static final int tab1=0x7f06001b;
-        public static final int tab2=0x7f06001c;
-        public static final int tab3=0x7f06001d;
-        public static final int tabHost=0x7f06001a;
+        public static final int tab1=0x7f060018;
+        public static final int tab2=0x7f060019;
+        public static final int tab3=0x7f06001a;
+        public static final int tabHost=0x7f060017;
         public static final int test_video_fragment=0x7f06000a;
         public static final int track_discription=0x7f060010;
         public static final int track_name=0x7f06000e;
         public static final int track_time=0x7f06000f;
-        public static final int video_file_cover=0x7f06002b;
-        public static final int video_file_description=0x7f06002f;
-        public static final int video_file_length=0x7f06002e;
-        public static final int video_file_name=0x7f06002d;
-        public static final int video_list_view=0x7f060025;
-        public static final int viewfinder_view=0x7f060015;
+        public static final int video_file_cover=0x7f060031;
+        public static final int video_file_description=0x7f060034;
+        public static final int video_file_name=0x7f060033;
+        public static final int video_list_view=0x7f060029;
+        public static final int viewfinder_view=0x7f060012;
     }
     public static final class layout {
         public static final int activity_content_browser=0x7f030000;
@@ -158,45 +163,48 @@ containing a value of this type.
         public static final int contents_text=0x7f07000b;
         public static final int db_name=0x7f07000c;
         public static final int decoder_name=0x7f07000d;
-        public static final int default_file_length=0x7f07000e;
+        public static final int default_current_track_name=0x7f07000e;
         public static final int encoder_name=0x7f07000f;
         public static final int failed=0x7f070010;
         public static final int hello_blank_fragment=0x7f070011;
         public static final int hello_world=0x7f070012;
-        public static final int msg_code_not_found=0x7f070013;
-        public static final int msg_default_contents=0x7f070014;
-        public static final int msg_default_format=0x7f070015;
-        public static final int msg_default_meta=0x7f070016;
-        public static final int msg_default_mms_subject=0x7f070017;
-        public static final int msg_default_status=0x7f070018;
-        public static final int msg_default_time=0x7f070019;
-        public static final int msg_default_type=0x7f07001a;
-        public static final int msg_no_audio=0x7f07001b;
-        public static final int msg_query_is_sending=0x7f07001c;
-        public static final int msg_server_unavalble=0x7f07001d;
-        public static final int result_address_book=0x7f07001e;
-        public static final int result_calendar=0x7f07001f;
-        public static final int result_email_address=0x7f070020;
-        public static final int result_geo=0x7f070021;
-        public static final int result_isbn=0x7f070022;
-        public static final int result_product=0x7f070023;
-        public static final int result_sms=0x7f070024;
-        public static final int result_tel=0x7f070025;
-        public static final int result_text=0x7f070026;
-        public static final int result_uri=0x7f070027;
-        public static final int result_wifi=0x7f070028;
-        public static final int server_uri=0x7f070029;
-        public static final int text_content_veiw_title=0x7f07002a;
-        public static final int title_activity_content_browser=0x7f07002b;
-        public static final int title_activity_image_view=0x7f07002c;
-        public static final int title_activity_playing_video=0x7f07002d;
-        public static final int title_section1=0x7f07002e;
-        public static final int title_section2=0x7f07002f;
-        public static final int title_section3=0x7f070030;
-        public static final int video_content_veiw_title=0x7f070031;
-        public static final int wifi_changing_network=0x7f070032;
-        public static final int wifi_ssid_label=0x7f070033;
-        public static final int wifi_type_label=0x7f070034;
+        public static final int item_name=0x7f070013;
+        public static final int msg_code_not_found=0x7f070014;
+        public static final int msg_default_contents=0x7f070015;
+        public static final int msg_default_format=0x7f070016;
+        public static final int msg_default_meta=0x7f070017;
+        public static final int msg_default_mms_subject=0x7f070018;
+        public static final int msg_default_status=0x7f070019;
+        public static final int msg_default_time=0x7f07001a;
+        public static final int msg_default_type=0x7f07001b;
+        public static final int msg_no_audio=0x7f07001c;
+        public static final int msg_query_is_sending=0x7f07001d;
+        public static final int msg_server_unavalble=0x7f07001e;
+        public static final int no_video_label=0x7f07001f;
+        public static final int result_address_book=0x7f070020;
+        public static final int result_calendar=0x7f070021;
+        public static final int result_email_address=0x7f070022;
+        public static final int result_geo=0x7f070023;
+        public static final int result_isbn=0x7f070024;
+        public static final int result_product=0x7f070025;
+        public static final int result_sms=0x7f070026;
+        public static final int result_tel=0x7f070027;
+        public static final int result_text=0x7f070028;
+        public static final int result_uri=0x7f070029;
+        public static final int result_wifi=0x7f07002a;
+        public static final int server_uri=0x7f07002b;
+        public static final int text_content_veiw_title=0x7f07002c;
+        public static final int title_activity_content_browser=0x7f07002d;
+        public static final int title_activity_image_view=0x7f07002e;
+        public static final int title_activity_playing_video=0x7f07002f;
+        public static final int title_section1=0x7f070030;
+        public static final int title_section2=0x7f070031;
+        public static final int title_section3=0x7f070032;
+        public static final int video_content_veiw_title=0x7f070033;
+        public static final int wifi_changing_network=0x7f070034;
+        public static final int wifi_ssid_label=0x7f070035;
+        public static final int wifi_type_label=0x7f070036;
+        public static final int zero_track_length=0x7f070037;
     }
     public static final class style {
         public static final int PlayerTheme=0x7f080000;
@@ -209,10 +217,10 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #SpacerView_exampleColor com.jwetherell.quick_response_code:exampleColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #SpacerView_exampleDimension com.jwetherell.quick_response_code:exampleDimension}</code></td><td></td></tr>
-           <tr><td><code>{@link #SpacerView_exampleDrawable com.jwetherell.quick_response_code:exampleDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #SpacerView_exampleString com.jwetherell.quick_response_code:exampleString}</code></td><td></td></tr>
+           <tr><td><code>{@link #SpacerView_exampleColor tk.hackspace.MusemMobileApp:exampleColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #SpacerView_exampleDimension tk.hackspace.MusemMobileApp:exampleDimension}</code></td><td></td></tr>
+           <tr><td><code>{@link #SpacerView_exampleDrawable tk.hackspace.MusemMobileApp:exampleDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #SpacerView_exampleString tk.hackspace.MusemMobileApp:exampleString}</code></td><td></td></tr>
            </table>
            @see #SpacerView_exampleColor
            @see #SpacerView_exampleDimension
@@ -223,7 +231,7 @@ containing a value of this type.
             0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003
         };
         /**
-          <p>This symbol is the offset where the {@link com.jwetherell.quick_response_code.R.attr#exampleColor}
+          <p>This symbol is the offset where the {@link tk.hackspace.MusemMobileApp.R.attr#exampleColor}
           attribute's value can be found in the {@link #SpacerView} array.
 
 
@@ -234,11 +242,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.jwetherell.quick_response_code:exampleColor
+          @attr name tk.hackspace.MusemMobileApp:exampleColor
         */
         public static final int SpacerView_exampleColor = 2;
         /**
-          <p>This symbol is the offset where the {@link com.jwetherell.quick_response_code.R.attr#exampleDimension}
+          <p>This symbol is the offset where the {@link tk.hackspace.MusemMobileApp.R.attr#exampleDimension}
           attribute's value can be found in the {@link #SpacerView} array.
 
 
@@ -250,11 +258,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.jwetherell.quick_response_code:exampleDimension
+          @attr name tk.hackspace.MusemMobileApp:exampleDimension
         */
         public static final int SpacerView_exampleDimension = 1;
         /**
-          <p>This symbol is the offset where the {@link com.jwetherell.quick_response_code.R.attr#exampleDrawable}
+          <p>This symbol is the offset where the {@link tk.hackspace.MusemMobileApp.R.attr#exampleDrawable}
           attribute's value can be found in the {@link #SpacerView} array.
 
 
@@ -262,11 +270,11 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.jwetherell.quick_response_code:exampleDrawable
+          @attr name tk.hackspace.MusemMobileApp:exampleDrawable
         */
         public static final int SpacerView_exampleDrawable = 3;
         /**
-          <p>This symbol is the offset where the {@link com.jwetherell.quick_response_code.R.attr#exampleString}
+          <p>This symbol is the offset where the {@link tk.hackspace.MusemMobileApp.R.attr#exampleString}
           attribute's value can be found in the {@link #SpacerView} array.
 
 
@@ -276,7 +284,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.jwetherell.quick_response_code:exampleString
+          @attr name tk.hackspace.MusemMobileApp:exampleString
         */
         public static final int SpacerView_exampleString = 0;
     };

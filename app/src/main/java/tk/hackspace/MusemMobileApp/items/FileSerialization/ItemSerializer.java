@@ -19,8 +19,19 @@ import tk.hackspace.MusemMobileApp.items.VideoFile;
 /**
  * Created by Tolik on 30.11.2014.
  */
-//TODO Add attachment feature
+
 public class ItemSerializer implements JsonSerializer<Item> {
+    public static Gson getTunedForSerializationGson() {
+        AttacheFileSerializer fileSerializer = new AttacheFileSerializer();
+        return new GsonBuilder().registerTypeAdapter(Item.class, new ItemSerializer())
+                .registerTypeAdapter(AttacheFile.class, fileSerializer)
+                .registerTypeAdapter(VideoFile.class, fileSerializer)
+                .registerTypeAdapter(AudioFile.class, fileSerializer)
+                .registerTypeAdapter(PictureFile.class, fileSerializer)
+                .setPrettyPrinting()
+                .create();
+    }
+
     @Override
     public JsonElement serialize(Item item, Type type, JsonSerializationContext jsonSerializationContext) {
         JsonObject result = new JsonObject();
@@ -58,16 +69,5 @@ public class ItemSerializer implements JsonSerializer<Item> {
 
         }
         return result;
-    }
-
-    public static Gson getTunedForSerializationGson() {
-        AttacheFileSerializer fileSerializer = new AttacheFileSerializer();
-        return new GsonBuilder().registerTypeAdapter(Item.class, new ItemSerializer())
-                .registerTypeAdapter(AttacheFile.class, fileSerializer)
-                .registerTypeAdapter(VideoFile.class, fileSerializer)
-                .registerTypeAdapter(AudioFile.class, fileSerializer)
-                .registerTypeAdapter(PictureFile.class, fileSerializer)
-                .setPrettyPrinting()
-                .create();
     }
 }

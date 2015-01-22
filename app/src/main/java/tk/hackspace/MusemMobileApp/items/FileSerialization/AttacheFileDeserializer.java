@@ -22,7 +22,6 @@ public class AttacheFileDeserializer implements JsonDeserializer<AttacheFile> {
         AttacheFile result;
         JsonObject object = (JsonObject) jsonElement;
         String attachment_type = object.get(JsonFormatStrings.ATTACHMENT_TYPE_FIELD).getAsString();
-        String filename = object.get("file_name").getAsString();
         switch (attachment_type) {
             case JsonFormatStrings.ATTACHMENT_TYPE_AUDIO:
                 result = new AudioFile(null);
