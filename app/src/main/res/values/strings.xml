@@ -70,4 +70,10 @@
     <string name="default_current_track_name">Media file name</string>
     <string name="item_name">Item name</string>
     <string name="no_video_label">This exhibit has no video materials.</string>
+    <string name="title_activity_feedback">FeedbackActivity</string>
+    <string name="submit_feedback_button_calptire">Submit feedback</string>
+    <string name="feedback_qr_code">feedback_qr_code_string</string>
+    <string name="feedback_activity_label">Feedback</string>
+    <string name="item_feedback_button_calpture">Send feedback about this item</string>
+
 </resources>

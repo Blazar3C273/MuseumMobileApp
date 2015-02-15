@@ -22,4 +22,8 @@ public class URLFactory {
     public static String getVideoURL(String itemID, String filename, Context context) {
         return getItemURL(itemID, context) + "/" + filename;
     }
+
+    public static String getFeedbackURL(Context context, String id) {
+        return context.getString(R.string.server_uri) + "feedback/" + id;
+    }
 }

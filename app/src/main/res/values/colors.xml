@@ -36,4 +36,5 @@
     <color name="viewfinder_mask">#607CFC00</color>
     <color name="background_color">#FF62AD00</color>
     <color name="darker_background_color">#559700</color>
+    <color name="lighter_background_color">#FFb0d67f</color>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">МОБИЛЬНЫЙ ГИД</string>
+    <string name="app_name">МОБИЛЬНЫЙ ГИД ТГЛИАМЗ</string>
     <string name="barcode_image">Изображение кода</string>
     <string name="capture_name">Захват QR-кода</string>
     <string name="contents_contact">Контактная информация</string>
@@ -11,7 +11,7 @@
     <string name="contents_text">Простой текст</string>
     <string name="decoder_name">Расшифровка QR-кода</string>
     <string name="encoder_name">Шифрование QR-кода</string>
-    <string name="msg_default_status">Чтобы начать сканирование разместите код внутри прямоугольной области.</string>
+    <string name="msg_default_status">Чтобы начать сканирование, разместите код внутри прямоугольной области.</string>
     <string name="msg_query_is_sending">Query sended to server. Whaiting for answer.</string>
     <string name="msg_server_unavalble">Сервер не доступен. Обратитесь к персоналу музея.</string>
     <string name="content_browser_activity_name">Просмотр контента</string>
@@ -28,4 +28,10 @@
     <string name="title_activity_playing_video">Просмотр видео</string>
     <string name="video_content_veiw_title">Видео материалы</string>
     <string name="failed">Произошла ошибка. Обратитесь к сотрудникам музея.</string>
+    <string name="submit_feedback_button_calptire">Submit feedback</string>
+    <string name="feedback_welcome_text">Мы очень ценим это. Если хотите, чтобы мы связались с вами, оставте свои контактные данные в соответствующей строке.</string>
+    <string name="walcome_feedback_text0">Спасибо, что решили дать нам обратную связь!</string>
+    <string name="contents_name">Имя</string>
+    <string name="msg_feedback_succsess_msg">Спасибо! Ваши пожелания будут учтены.</string>
+    <string name="msg_feedback_fail_msg">Не удалось отправить пожелания. Обратитесь к персоналу.</string>
 </resources>

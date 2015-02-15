@@ -28,7 +28,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
-
     <application
         android:icon="@drawable/icon"
         android:label="@string/app_name">
@@ -37,7 +36,7 @@
             android:clearTaskOnLaunch="true"
             android:configChanges="orientation|keyboardHidden"
             android:icon="@drawable/icon"
-            android:label="@string/capture_name"
+            android:label="@string/app_name"
             android:screenOrientation="landscape"
             android:stateNotNeeded="true"
             android:theme="@android:style/Theme.Light"
@@ -57,6 +56,10 @@
                 android:value="tk.hackspace.MusemMobileApp.ContentBrowserActivity" />
         </activity>
         <activity
+            android:name=".FeedbackActivity"
+            android:label="@string/feedback_activity_label"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".PictureViewerActivity"
             android:label="@string/title_activity_image_view"
             android:screenOrientation="portrait"
@@ -75,6 +78,7 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/video_content_veiw_title"
             android:theme="@style/PlayerTheme" />
+
     </application>
 
 </manifest>

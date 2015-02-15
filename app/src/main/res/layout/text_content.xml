@@ -1,55 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
-    android:background="@color/background_color">
+    android:background="@color/background_color"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/simpleItemName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Item short name"
-        android:id="@+id/simpleItemName"
+        android:layout_gravity="center_horizontal"
         android:lineSpacingExtra="4dp"
-        android:singleLine="false"
         android:lines="1"
         android:linksClickable="true"
         android:shadowColor="@color/viewfinder_laser"
-        android:layout_gravity="center_horizontal" />
+        android:singleLine="false"
+        android:text="Item short name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="25dip"
-        android:id="@+id/imageView"
-        android:src="@drawable/line3"
-        android:scaleType="centerInside" />
+        android:scaleType="centerInside"
+        android:src="@drawable/line3" />
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollView"
         android:fillViewport="true"
+        android:isScrollContainer="true"
         android:paddingLeft="10dip"
         android:paddingRight="10dip"
-        android:scrollbars="vertical"
-        android:isScrollContainer="true">
+        android:scrollbars="vertical">
 
         <TextView
+            android:id="@+id/descriptionTextWiew"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/descriptionTextWiew"
-            android:overScrollMode="ifContentScrolls"
             android:clickable="true"
-            android:textAlignment="center" />
+            android:overScrollMode="ifContentScrolls"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
     </ScrollView>
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="25dip"
-        android:id="@+id/imageView2"
-        android:src="@drawable/line3"
-        android:scaleType="centerInside" />
+        android:scaleType="centerInside"
+        android:src="@drawable/line3" />
+
+    <Button
+        android:id="@+id/feedbackButton"
+        style="@android:style/Widget.DeviceDefault.Light.ActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/item_feedback_button_calpture" />
+
 </LinearLayout>

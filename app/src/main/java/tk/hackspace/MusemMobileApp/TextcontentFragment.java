@@ -2,6 +2,7 @@ package tk.hackspace.MusemMobileApp;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
@@ -14,6 +15,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -42,6 +44,13 @@ public class TextcontentFragment extends Fragment {
 
     private OnTextFragmentInteractionListener mListener;
 
+    /**
+     * Mandatory empty constructor for the fragment manager to instantiate the
+     * fragment (e.g. upon screen orientation changes).
+     */
+    public TextcontentFragment() {
+    }
+
     // TODO: Rename and change types of parameters
     public static TextcontentFragment newInstance(Item _item) {
         TextcontentFragment fragment = new TextcontentFragment();
@@ -50,13 +59,6 @@ public class TextcontentFragment extends Fragment {
         args.putString(ITEM_ID, fragment.item.get_id());
         fragment.setArguments(args);
         return fragment;
-    }
-
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
-    public TextcontentFragment() {
     }
 
     @Override
@@ -136,6 +138,15 @@ public class TextcontentFragment extends Fragment {
             ((TextView) getView().findViewById(R.id.descriptionTextWiew)).setText(spanned);
         }
         ((TextView) getView().findViewById(R.id.simpleItemName)).setText(item.getItemName());
+        ((Button) getActivity().findViewById(R.id.feedbackButton)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), FeedbackActivity.class);
+                intent.putExtra("item_id", item.get_id());
+                intent.putExtra("item_name", item.getItemName());
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
