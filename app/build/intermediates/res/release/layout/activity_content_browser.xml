@@ -1,0 +1,7 @@
+<android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tk.hackspace.MusemMobileApp.ContentBrowserActivity" />
+<!-- From: file:/C:/Users/Anatoliy/Documents/MusemGuideSystem/MusemGuideSystem/MobileApp/android-quick-response-code-master1/app/src/main/res/layout/activity_content_browser.xml -->

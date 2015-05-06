@@ -13,9 +13,7 @@
         android:lineSpacingExtra="4dp"
         android:lines="1"
         android:linksClickable="true"
-        android:shadowColor="@color/viewfinder_laser"
         android:singleLine="false"
-        android:text="Item short name"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
@@ -29,22 +27,19 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:fillViewport="true"
         android:isScrollContainer="true"
         android:paddingLeft="10dip"
         android:paddingRight="10dip"
-        android:scrollbars="vertical">
-
-        <TextView
-            android:id="@+id/descriptionTextWiew"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:overScrollMode="ifContentScrolls"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:scrollbars="vertical"
+        android:layout_weight="1">
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webView" />
     </ScrollView>
+
 
     <ImageView
         android:id="@+id/imageView2"

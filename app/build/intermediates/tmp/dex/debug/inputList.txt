@@ -1,0 +1,13 @@
+C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\classes\debug
+C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-ec340d9b05759b741f8c502ad13f42a70c71e068.jar
+C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-adef377c261b5ab1a73ae40baabc37f7beb22c4d.jar
+C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\classes-1662ae3c17e20127ea94efbb39697e0264147fdd.jar
+C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\classes-2fe2fcc8888b4b9669f31b9127265684ad4d1e94.jar
+C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.6-3eda69d10d0d5d302abac829f741fb952f671144.jar
+C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\library-2.4.0-ec9c194f76eb60ce196bcca27beee2de165f1381.jar
+C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.3-08d632dde37e7e2174c571747abab5cdb7c0e072.jar
+C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-d9868f961a0ba780f8ca4c01a2d36927b4efa321.jar
+C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\gson-2.3.1-b04cd14f92a5b9c09666e0b8f6842b2a5c16d048.jar
+C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\library-635d2113807259000c47426f3abe16a932f77ab4.jar
+C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\core-3ae080e33b4b1ec068e45d2a5e341047c0d4d7bf.jar
+C:\Users\Anatoliy\Documents\MusemGuideSystem\MusemGuideSystem\MobileApp\android-quick-response-code-master1\app\build\intermediates\pre-dexed\debug\classes-4eb533bfa7c6cc53417f5ec6c2cb4759db2f350f.jar

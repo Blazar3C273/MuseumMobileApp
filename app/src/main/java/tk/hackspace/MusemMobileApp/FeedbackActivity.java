@@ -51,6 +51,9 @@ public class FeedbackActivity extends Activity {
         String contact = String.valueOf(((EditText) findViewById(R.id.feedbackVisitorContactText)).getText());
         try {
             jsonObject.put("_id", id);
+            jsonObject.put("is_viewed",false);
+            jsonObject.put("date",new Date().toString());
+
             if (text != null && !text.equals("")) {
                 jsonObject.put("feedback_text", text);
             }

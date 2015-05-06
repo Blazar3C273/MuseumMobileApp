@@ -28,10 +28,14 @@
     <string name="title_activity_playing_video">Просмотр видео</string>
     <string name="video_content_veiw_title">Видео материалы</string>
     <string name="failed">Произошла ошибка. Обратитесь к сотрудникам музея.</string>
-    <string name="submit_feedback_button_calptire">Submit feedback</string>
+    <string name="submit_feedback_button_calptire">Отправить отзыв</string>
     <string name="feedback_welcome_text">Мы очень ценим это. Если хотите, чтобы мы связались с вами, оставте свои контактные данные в соответствующей строке.</string>
     <string name="walcome_feedback_text0">Спасибо, что решили дать нам обратную связь!</string>
     <string name="contents_name">Имя</string>
     <string name="msg_feedback_succsess_msg">Спасибо! Ваши пожелания будут учтены.</string>
     <string name="msg_feedback_fail_msg">Не удалось отправить пожелания. Обратитесь к персоналу.</string>
+    <string name="feedback_activity_label">Обратная связь</string>
+    <string name="item_feedback_button_calpture">Оставить отзыв о экспонате...</string>
+    <string name="title_activity_feedback">Обратная связь</string>
+    <string name="title_activity_hidden">Скрытое меню</string>
 </resources>

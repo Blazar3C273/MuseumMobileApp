@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tk.hackspace.MusemMobileApp.PictureViewerActivity"
+    android:id="@id/pictureViewerRelativeLayout"
+    android:background="@color/background_color"
+    android:padding="2dip">
+
+    <it.sephiroth.android.library.imagezoom.ImageViewTouch
+        android:id="@+id/image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:layout_margin="0dp"
+        android:padding="0dp" />
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/Anatoliy/Documents/MusemGuideSystem/MusemGuideSystem/MobileApp/android-quick-response-code-master1/app/src/main/res/layout/activity_main_activity2.xml -->

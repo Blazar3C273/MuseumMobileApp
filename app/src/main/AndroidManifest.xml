@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="tk.hackspace.MusemMobileApp"
     android:versionCode="1"
-    android:versionName="1.0">
+    android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="15"
@@ -30,7 +30,7 @@
 
     <application
         android:icon="@drawable/icon"
-        android:label="@string/app_name">
+        android:label="@string/app_name" >
         <activity
             android:name=".CaptureActivity"
             android:clearTaskOnLaunch="true"
@@ -39,8 +39,7 @@
             android:label="@string/app_name"
             android:screenOrientation="landscape"
             android:stateNotNeeded="true"
-            android:theme="@android:style/Theme.Light"
-            android:windowSoftInputMode="stateAlwaysHidden">
+            android:windowSoftInputMode="stateAlwaysHidden" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -50,7 +49,7 @@
         <activity
             android:name=".ContentBrowserActivity"
             android:parentActivityName=".ContentBrowserActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="tk.hackspace.MusemMobileApp.ContentBrowserActivity" />
@@ -63,7 +62,7 @@
             android:name=".PictureViewerActivity"
             android:label="@string/title_activity_image_view"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -78,7 +77,10 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/video_content_veiw_title"
             android:theme="@style/PlayerTheme" />
-
+        <activity
+            android:name=".HiddenActivity"
+            android:label="@string/title_activity_hidden" >
+        </activity>
     </application>
 
 </manifest>

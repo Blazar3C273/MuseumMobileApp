@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -102,41 +103,8 @@ public class TextcontentFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        if (item.getPictureFiles() != null) {
-            for (final PictureFile pictureFile : item.getPictureFiles()) {
-                ImageLoadingListener listner = new SimpleImageLoadingListener() {
-                    @Override
-                    public void onLoadingComplete(String imageUri, final View view, Bitmap loadedImage) {
-                        super.onLoadingComplete(imageUri, view, loadedImage);
-                        Log.i(TAG, "picture from uri " + imageUri + " is loaded");
-                        pictureFile.setBitmap(loadedImage);
-                        Html.ImageGetter imageGetter = new Html.ImageGetter() {
-                            @Override
-                            public Drawable getDrawable(String s) {
-                                Drawable drawable = null;
-                                for (final PictureFile file : item.getPictureFiles()) {
-                                    if (file.getFilename().equals(s) && file.getBitmap() != null) {
-                                        Rect bounds = new Rect(0, 0, file.getBitmap().getWidth(), file.getBitmap().getHeight());
-                                        drawable = new BitmapDrawable(file.getBitmap());
-                                        drawable.setBounds(bounds);
-                                    }
-                                }
-                                return drawable;
-                            }
-                        };
-                        Spanned spanned = Html.fromHtml(item.getText(), imageGetter, null);
-
-                        ((TextView) getView().findViewById(R.id.descriptionTextWiew)).setText(spanned);
-                        ((TextView) getView().findViewById(R.id.descriptionTextWiew)).setMovementMethod(LinkMovementMethod.getInstance());
-                    }
-                };
-                ImageSize size = new ImageSize(pictureFile.getWidth(), pictureFile.getHeight());
-                ImageLoader.getInstance().loadImage(URLFactory.getImageURL(item.get_id(), pictureFile.getFilename(), getActivity()), size, listner);
-            }
-        } else {
-            Spanned spanned = Html.fromHtml(item.getText(), null, null);
-            ((TextView) getView().findViewById(R.id.descriptionTextWiew)).setText(spanned);
-        }
+        WebView webView = (WebView) getView().findViewById(R.id.webView);
+        webView.loadData(getValidHtmlForWebView(item.getText()), "text/html", "UTF-8");
         ((TextView) getView().findViewById(R.id.simpleItemName)).setText(item.getItemName());
         ((Button) getActivity().findViewById(R.id.feedbackButton)).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -147,6 +115,10 @@ public class TextcontentFragment extends Fragment {
                 startActivity(intent);
             }
         });
+    }
+
+    private String getValidHtmlForWebView(String text) {
+        return text.replace("src=\"","src=\""+URLFactory.getItemURL(item.get_id(),getActivity().getApplicationContext())+"/");
     }
 
     @Override

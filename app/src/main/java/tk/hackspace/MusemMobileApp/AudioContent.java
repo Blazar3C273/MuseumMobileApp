@@ -139,9 +139,11 @@ public class AudioContent extends Fragment {
             currentTrackName.setText(R.string.msg_no_audio);
         } else
             try {
+                getView().findViewById(R.id.player_layout).setVisibility(View.VISIBLE);
                 setCurrentTrack(0);
+
             } catch (IOException e) {
-                Toast.makeText(getActivity().getApplicationContext(), R.string.failed, Toast.LENGTH_SHORT);
+                Toast.makeText(getActivity().getApplicationContext(), R.string.failed, Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
 

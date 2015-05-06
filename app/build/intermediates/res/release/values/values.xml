@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Anatoliy/Documents/MusemGuideSystem/MusemGuideSystem/MobileApp/android-quick-response-code-master1/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="background_color">#FF62AD00</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="darker_background_color">#559700</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="lighter_background_color">#FFb0d67f</color>
+    <color name="possible_result_points">#c07FFF00</color>
+    <color name="result_image_border">#ff526F35</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c07FFF00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="status_view">#50000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_frame">#ff526F35</color>
+    <color name="viewfinder_laser">#ff7FFF00</color>
+    <color name="viewfinder_mask">#607CFC00</color>
+    <declare-styleable name="SpacerView"><attr format="string" name="exampleString"/><attr format="dimension" name="exampleDimension"/><attr format="color" name="exampleColor"/><attr format="color|reference" name="exampleDrawable"/></declare-styleable>
+    <!-- From: file:/C:/Users/Anatoliy/Documents/MusemGuideSystem/MusemGuideSystem/MobileApp/android-quick-response-code-master1/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- From: file:/C:/Users/Anatoliy/Documents/MusemGuideSystem/MusemGuideSystem/MobileApp/android-quick-response-code-master1/app/src/main/res/values/ids.xml -->
+    <eat-comment/>
+    <item name="auto_focus" type="id"/>
+    <item name="decode" type="id"/>
+    <item name="decode_failed" type="id"/>
+    <item name="decode_succeeded" type="id"/>
+    <item name="pictureViewerRelativeLayout" type="id"/>
+    <item name="quit" type="id"/>
+    <item name="restart_preview" type="id"/>
+    <item name="return_scan_result" type="id"/>
+    <!-- From: file:/C:/Users/Anatoliy/Documents/MusemGuideSystem/MusemGuideSystem/MobileApp/android-quick-response-code-master1/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">MOBILE MUSEUM GUIDE</string>
+    <string name="audio_content_veiw_title">Audio information</string>
+    <string name="barcode_image">Barcode Image</string>
+    <string name="capture_name">QR Code Capture</string>
+    <string name="content_browser_activity_name">Content browser</string>
+    <string name="contents_contact">Contact info</string>
+    <string name="contents_email">Email address</string>
+    <string name="contents_location">Geographic coordinates</string>
+    <string name="contents_name">Name</string>
+    <string name="contents_phone">Phone number</string>
+    <string name="contents_sms">SMS address</string>
+    <string name="contents_text">Plain text</string>
+    <string name="db_name" translatable="false">exibit</string>
+    <string name="decoder_name">QR Code Decoder</string>
+    <string name="default_current_track_name">Media file name</string>
+    <string name="encoder_name">QR Code Encoder</string>
+    <string name="failed">Something wrong is happend. Contact the staff.</string>
+    <string name="feedback_activity_label">Feedback</string>
+    <string name="feedback_qr_code" translatable="false">feedback_qr_code_string</string>
+    <string name="feedback_welcome_text">We really appreciate it. If you would like to, we will contact with you. Just leave  your contact details in the corresponding row.</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="hello_world" translatable="false">Hello world!</string>
+    <string name="item_feedback_button_calpture">Send feedback about this item</string>
+    <string name="item_name">Item name</string>
+    <string name="msg_code_not_found">Exhibit not found. Please, try another.</string>
+    <string name="msg_default_contents" translatable="false">Contents</string>
+    <string name="msg_default_format" translatable="false">Format</string>
+    <string name="msg_default_meta" translatable="false">Metadata</string>
+    <string name="msg_default_mms_subject" translatable="false">Hi</string>
+    <string name="msg_default_status">Place a barcode inside the viewfinder rectangle to scan it.</string>
+    <string name="msg_default_time" translatable="false">Time</string>
+    <string name="msg_default_type" translatable="false">Type</string>
+    <string name="msg_feedback_fail_msg">Sending feedback is faild. Contact with staff</string>
+    <string name="msg_feedback_succsess_msg">Thank you! Your suggestions will not go unheeded.</string>
+    <string name="msg_no_audio">Exhibit has no audio.</string>
+    <string name="msg_query_is_sending">Query sended to server. Whaiting for answer.</string>
+    <string name="msg_server_unavalble">Server unavailable now. Contact the staff.</string>
+    <string name="no_video_label">This exhibit has no video materials.</string>
+    <string name="result_address_book" translatable="false">Found contact info</string>
+    <string name="result_calendar" translatable="false">Found calendar event</string>
+    <string name="result_email_address" translatable="false">Found email address</string>
+    <string name="result_geo" translatable="false">Found geographic coordinates</string>
+    <string name="result_isbn" translatable="false">Found book</string>
+    <string name="result_product" translatable="false">Found product</string>
+    <string name="result_sms" translatable="false">Found SMS address</string>
+    <string name="result_tel" translatable="false">Found phone number</string>
+    <string name="result_text" translatable="false">Found plain text</string>
+    <string name="result_uri" translatable="false">Found URL</string>
+    <string name="result_wifi" translatable="false">Found WLAN Configuration</string>
+    <!-- From: file:/C:/Users/Anatoliy/Documents/MusemGuideSystem/MusemGuideSystem/MobileApp/android-quick-response-code-master1/app/src/main/res/values/network_settings.xml -->
+    <eat-comment/>
+    <string name="server_uri" translatable="false">http://192.168.1.25:5984/</string>
+    <!-- From: file:/C:/Users/Anatoliy/Documents/MusemGuideSystem/MusemGuideSystem/MobileApp/android-quick-response-code-master1/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="submit_feedback_button_calptire">Submit feedback</string>
+    <string name="text_content_veiw_title">Exhibit information</string>
+    <string name="title_activity_content_browser">Content browser</string>
+    <string name="title_activity_feedback">Feedback</string>
+    <string name="title_activity_hidden">HiddenActivity</string>
+    <string name="title_activity_image_view">Image viewing</string>
+    <string name="title_activity_playing_video">Playing Video</string>
+    <string name="title_section1" translatable="false">Section 1</string>
+    <string name="title_section2" translatable="false">Section 2</string>
+    <string name="title_section3" translatable="false">Section 3</string>
+    <string name="video_content_veiw_title">Video content</string>
+    <string name="walcome_feedback_text0">Thank you, that you decided give us feedback!</string>
+    <string name="wifi_changing_network" translatable="false">Changing Network</string>
+    <string name="wifi_ssid_label" translatable="false">Network Name</string>
+    <string name="wifi_type_label" translatable="false">Type</string>
+    <string name="zero_track_length" translatable="false">0:00</string>
+</resources>

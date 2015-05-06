@@ -34,19 +34,18 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import org.apache.http.Header;
 import org.json.JSONObject;
 
+import java.util.Calendar;
 import java.util.EnumSet;
 import java.util.Set;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import tk.hackspace.MusemMobileApp.network.NetworkingFunctions;
 import tk.hackspace.MusemMobileApp.network.URLFactory;
 import tk.hackspace.MusemMobileApp.result.ResultHandler;
 import tk.hackspace.MusemMobileApp.result.ResultHandlerFactory;
 
-/**
- * Example Capture Activity.
- *
- * @author Justin Wetherell (phishman3579@gmail.com)
- */
+
 public class CaptureActivity extends DecoderActivity {
 
     private static final String TAG = CaptureActivity.class.getSimpleName();
@@ -56,10 +55,14 @@ public class CaptureActivity extends DecoderActivity {
     private TextView statusView = null;
     private View resultView = null;
     private boolean inScanMode = false;
+    private int clickCounter;
+
+
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+        clickCounter = 0;
         setContentView(R.layout.capture);
         NetworkingFunctions.initNetworkingFunctions(this);
         resultView = findViewById(R.id.result_view);
@@ -121,6 +124,7 @@ public class CaptureActivity extends DecoderActivity {
                     progressBar.setEnabled(false);
                     intent.putExtra("item", response.toString());
                     startActivity(intent);
+                    onResume();
                 }
 
                 @Override
@@ -132,5 +136,19 @@ public class CaptureActivity extends DecoderActivity {
 
         } else Toast.makeText(this, R.string.msg_server_unavalble, Toast.LENGTH_LONG).show();
         onResume();
+    }
+    public void onTextClick(View v){
+        clickCounter++;
+        Toast.makeText(this,String.valueOf(clickCounter),Toast.LENGTH_SHORT).show();
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                clickCounter =0;
+            }
+        },2000);
+        if(clickCounter==5){
+            clickCounter = 0;
+            startActivity(new Intent(getApplicationContext(),HiddenActivity.class));
+        }
     }
 }

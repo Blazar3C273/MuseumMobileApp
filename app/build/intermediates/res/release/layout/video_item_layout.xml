@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/darker_background_color"
+    android:orientation="horizontal"
+    android:padding="2dip">
+
+    <ImageView
+        android:id="@+id/video_file_cover"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:src="@drawable/default_video_cover">
+
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/video_file_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="Name"
+                android:textColor="#ffffffff"
+                android:textSize="20sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/video_file_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginRight="10dp"
+            android:text="Some foo description text. Cool. Some noun.">
+
+        </TextView>
+    </LinearLayout>
+</LinearLayout><!-- From: file:/C:/Users/Anatoliy/Documents/MusemGuideSystem/MusemGuideSystem/MobileApp/android-quick-response-code-master1/app/src/main/res/layout/video_item_layout.xml -->

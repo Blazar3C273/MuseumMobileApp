@@ -52,7 +52,7 @@
                 android:layout_height="fill_parent"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
-                android:rating="2.55"
+                android:rating="0.0"
                 android:visibility="gone" />
 
             <EditText

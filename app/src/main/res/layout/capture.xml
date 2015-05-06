@@ -15,19 +15,29 @@
  -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-
+    android:layout_height="fill_parent"
+    android:onClick="onTextClick"
+    >
     <SurfaceView
         android:id="@+id/preview_view"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"></SurfaceView>
-
+        android:layout_height="fill_parent"/>
     <tk.hackspace.MusemMobileApp.ViewfinderView
         android:id="@+id/viewfinder_view"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@color/transparent"></tk.hackspace.MusemMobileApp.ViewfinderView>
-
+        android:background="@color/transparent"
+        />
+    <TextView
+        android:id="@+id/status_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@color/transparent"
+        android:text="@string/msg_default_status"
+        android:textColor="@color/status_text"
+        android:textSize="22sp"
+        />
     <LinearLayout
         android:id="@+id/result_view"
         android:orientation="vertical"
@@ -36,14 +46,12 @@
         android:background="@color/result_view"
         android:gravity="center"
         android:padding="4dip">
-
         <ProgressBar
             style="?android:attr/progressBarStyleLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/query_sending_progress_bar"
             android:layout_marginLeft="5dip" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,15 +63,5 @@
             android:textIsSelectable="false"
             android:singleLine="false" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/status_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:background="@color/transparent"
-        android:text="@string/msg_default_status"
-        android:textColor="@color/status_text"
-        android:textSize="22sp"></TextView>
 
 </FrameLayout>

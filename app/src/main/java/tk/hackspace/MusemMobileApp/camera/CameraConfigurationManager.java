@@ -34,7 +34,7 @@ import tk.hackspace.MusemMobileApp.data.Preferences;
 public final class CameraConfigurationManager {
 
     private static final String TAG = "CameraConfiguration";
-    private static final int MIN_PREVIEW_PIXELS = 440 * 440; // small screen
+    private static final int MIN_PREVIEW_PIXELS = 240 * 240; // small screen
     private static final int MAX_PREVIEW_PIXELS = 800 * 600; // large/HD screen
 
     private final Context context;
